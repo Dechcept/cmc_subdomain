@@ -31,7 +31,7 @@ const ProductSlider = ({ ProductData }) => {
                     <img
                       src={`${item.img}`}
                       alt="#img"
-                      className="h-[580px] max-lg:h-full max-md:h-[236px] max-sm:h-[183px]  w-[1160px] max-lg:w-full "
+                      className="h-[650px] max-lg:h-full max-md:h-[236px] max-sm:h-[183px]  w-[1160px] max-lg:w-full "
                     />
                   </div>
                 </SwiperSlide>

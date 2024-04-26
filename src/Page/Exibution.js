@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Gallery from "../Componets/Gallery";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MainLayout from "../Main";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-const Exibution = () => {
+const Exibution = (props) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <MainLayout>
       <section className="p-3">
@@ -55,7 +59,7 @@ const Exibution = () => {
         </div>
 
         <div className="flex flex-col items-center gap-24 max-lg:gap-16 mt-48 max-xl:mt-20 max-sm:mt-10">
-          <h1 className="text-[120px]  max-lg:text-[80px] max-md:text-[60px] max-sm:text-[40px] max text-center font-sans font-bold leading-[120%] max-xl:leading-[100%] tracking-[12px] max-sm:tracking-[4px] w-[1160px] max-xl:w-full">
+          <h1 className="text-[90px]  max-lg:text-[80px] max-md:text-[60px] max-sm:text-[40px] max text-center font-sans font-bold leading-[120%] max-xl:leading-[100%] tracking-[12px] max-sm:tracking-[4px] w-[1160px] max-xl:w-full">
             {" "}
             Want to connect with us
           </h1>

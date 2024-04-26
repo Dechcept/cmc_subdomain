@@ -9,7 +9,7 @@ import 'swiper/css/pagination'; // Add this line if you need Swiper pagination s
 const Testimonial = () => {
   return (
     <>
-      <div className="bg-black pt-20 pb-20 ">
+      <div className="bg-black pt-20 pb-20 my-10">
         <p className="bg-black text-[80px] text-white text-center max-md:text-[50px]">
           Client Say’s
         </p>

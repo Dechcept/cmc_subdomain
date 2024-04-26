@@ -55,69 +55,69 @@ const Slider = ({ heading, list, activity, paraStyle }) => {
           autoplay={{ delay: 3000 }}
           modules={[Autoplay]}
         >
-         
-         
+
+
           {list.map((item, index) => {
             return (
               <SwiperSlide>
                 <Link to={item.url}>
-                <div key={index} className="flex justify-center ">
-                  <div className="flex justify-center gap-16 max-xl:flex-col  max-lg:gap-10 max-sm:gap-5 w-fit ">
-                    <div className=" flex flex-col items-start my-5">
-                      <span className=" text-white font-bold text-[40px] leading-[48px] text-left tracking-widest  ">
-                        {item.No}
-                      </span>
-                      <hr className="w-[160px] h-[2px] mt-5 bg-white" />
-                    </div>
-                    <div className="">
-                      <h1 className="text-[#FFFFFF] w-[565px] max-xl:w-full  font-semibold text-[40px]  max-sm:text-3xl leading-[48px] max-sm:leading-[120%] tracking-widest font-sans">
-                        {item.title}
-                      </h1>
-                      <p
-                        className={` max-sm:mt-5 w-[560px]  max-xl:w-full    text-[#FFFFFF] font-normal text-[20px]  leading-[35px] tracking-wider mt-5 `}
-                      >
-                        {item.para}
-                        <br />
-                        {item.para2}
-                        <br />
+                  <div key={index} className="flex justify-center ">
+                    <div className="flex justify-center gap-16 max-xl:flex-col  max-lg:gap-10 max-sm:gap-5 w-fit ">
+                      <div className=" flex flex-col items-start my-5">
+                        <span className=" text-white font-bold text-[40px] leading-[48px] text-left tracking-widest  ">
+                          {item.No}
+                        </span>
+                        <hr className="w-[160px] h-[2px] mt-5 bg-white" />
+                      </div>
+                      <div className="">
+                        <h1 className="text-[#FFFFFF] w-[565px] max-xl:w-full  font-semibold text-[40px]  max-sm:text-3xl leading-[48px] max-sm:leading-[120%] tracking-widest font-sans">
+                          {item.title}
+                        </h1>
+                        <p
+                          className={` max-sm:mt-5 w-[560px]  max-xl:w-full    text-[#FFFFFF] font-normal text-[20px]  leading-[35px] tracking-wider mt-5 `}
+                        >
+                          {item.para}
+                          <br />
+                          {item.para2}
+                          <br />
 
-                        {item.para3}
-                        <br />
+                          {item.para3}
+                          <br />
 
-                        {activity ? (
-                          <ul className="list-disc pl-6">
-                            {Object.keys(item.point).map((key) => (
-                              <li
-                                key={key}
-                                className="text-white  font-normal text-[20px]  leading-[30px] tracking-wider "
-                              >
-                                {item.point[key]}
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          ""
-                        )}
-                      </p>
-                    </div>
-                    <div className="relative w-full h-full max-sm:h-fit ">
-                      <img
-                        src={item.src}
-                        alt="#img"
-                        className="w-full h-full "
-                      />
+                          {activity ? (
+                            <ul className="list-disc pl-6">
+                              {Object.keys(item.point).map((key) => (
+                                <li
+                                  key={key}
+                                  className="text-white  font-normal text-[20px]  leading-[30px] tracking-wider "
+                                >
+                                  {item.point[key]}
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            ""
+                          )}
+                        </p>
+                      </div>
+                      <div className="relative w-full h-full max-sm:h-fit ">
+                        <img
+                          src={item.src}
+                          alt="#img"
+                          className="w-full h-full "
+                        />
 
-                      {/* <div className=" max-xl:hidden h-[120px] w-[120px] bg-[#D9D9D9] rounded-ful l absolute top-[20%] max-lg:-top-1/4 -left-20 max-lg:left-[60%] flex justify-center items-center">
+                        {/* <div className=" max-xl:hidden h-[120px] w-[120px] bg-[#D9D9D9] rounded-ful l absolute top-[20%] max-lg:-top-1/4 -left-20 max-lg:left-[60%] flex justify-center items-center">
                       <span className="text-[#000000] font-bold text-[20px] leading-[30px] tracking-[10%]">
                         Drag
                       </span>
                     </div> */}
+                      </div>
                     </div>
                   </div>
-                </div>
                 </Link>
               </SwiperSlide>
-              
+
             );
           })}
         </Swiper>
